@@ -15,7 +15,7 @@ jobs:
         uses: actions/checkout@v4
 
       - name: Cache Library folder
-        uses: actions/cache@v3
+        uses: actions/cache@v4
         with:
           path: Library
           key: Library-${{ runner.os }}-${{ github.sha }}
@@ -23,7 +23,7 @@ jobs:
             Library-${{ runner.os }}-
 
       - name: Set up Unity
-        uses: game-ci/unity-builder@v3
+        uses: game-ci/unity-builder@v4
         with:
           unityVersion: 6000.0.25f1
           targetPlatform: StandaloneWindows64
